@@ -1,10 +1,10 @@
-// Dalio, Brian A.
-// dalioba
-// 2019-06-03
+// Duong, Andrew
+// and7697
+// 2019-06-04
 
 public class hmwk_01 {
   public static void main( String[] args )
   {
-    // Put an output statement here that prints "Hello, world!"
+    System.out.println("Hello, world!");
   }
 }
