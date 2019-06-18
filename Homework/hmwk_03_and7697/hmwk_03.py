@@ -1,6 +1,6 @@
 # Duong, Andrew
 # and7697
-# 2019-06-14
+# 2019-06-18
 #--------------------------------------------------
 import re
 import sys
@@ -11,15 +11,14 @@ def processToken( token ) :
   # the string in 'token' according to your three Regular
   # Expressions and print the appropriate message.
 
-  # print( '>%s< is the proposed token.' % ( token ) )
-  if re.search( "[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+" , token )
+  if re.search( "^[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+$" , token ) :
     print( ">" + token + "< matches EffPea." )
-  elif re.search( "\\}[a-z0-9]*\\(" , token )
+  elif re.search( "^\\}[a-z0-9]*\\($" , token ) :
     print( ">" + token + "< matches Stir." )
-  elif re.search( "\\@[0-9R-W]+\\#" , token )
+  elif re.search( "^\\@[0-9R-W]+\\#$" , token ) :
     print( ">" + token + "< matches Ent." )
-  else
-    print( ">" + token + "< does not match." );
+  else :
+    print( ">" + token + "< does not match." )
 
 #--------------------------------------------------
 def main() :
