@@ -14,11 +14,11 @@ public class hmwk_03 {
     // the string in 'token' according to your three Regular
     // Expressions and print the appropriate message.
 
-    if( Pattern.matches( "[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+" , token ) )
+    if ( Pattern.matches( "[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+" , token ) )
       System.out.println( ">" + token + "< matches EffPea." );
-    else if( Pattern.matches( "\\}[a-z0-9]*\\(" , token ))
+    else if ( Pattern.matches( "\\}[a-z0-9]*\\(" , token ) )
       System.out.println( ">" + token + "< matches Stir." );
-    else if( Pattern.matches( "\\@[0-9R-W]+\\#" , token ))
+    else if ( Pattern.matches( "\\@[0-9R-W]+\\#" , token ) )
       System.out.println( ">" + token + "< matches Ent." );
     else
       System.out.println( ">" + token + "< does not match." );

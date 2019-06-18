@@ -13,11 +13,11 @@ public class hmwk_03
     // the string in 'token' according to your three Regular
     // Expressions and print the appropriate message.
 
-    if( Regex.IsMatch( token , "^[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+$" ) )
+    if ( Regex.IsMatch( token , "^[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+$" ) )
       Console.WriteLine( ">" + token + "< matches EffPea." );
-    else if( Regex.IsMatch( token , "^\\}[a-z0-9]*\\($" ))
+    else if ( Regex.IsMatch( token , "^\\}[a-z0-9]*\\($" ) )
       Console.WriteLine( ">" + token + "< matches Stir." );
-    else if( Regex.IsMatch( token , "^\\@[0-9R-W]+\\#$" ))
+    else if ( Regex.IsMatch( token , "^\\@[0-9R-W]+\\#$" ) )
       Console.WriteLine( ">" + token + "< matches Ent." );
     else
       Console.WriteLine( ">" + token + "< does not match." );
