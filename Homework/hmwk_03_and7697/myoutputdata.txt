@@ -2,14 +2,14 @@ processing tokens from inputdata.txt ...
 >a{)0< matches EffPea.
 >eieio{)000AAAfff< matches EffPea.
 >aAeEiIoOuU{)0123456789abcdefABCDEF< matches EffPea.
->ba{)9< does not match.
+>ba{)9< matches EffPea.
 >u){b< does not match.
 >{)a< does not match.
 >}q(< matches Stir.
 >}r1s23(< matches Stir.
 >}(< matches Stir.
 >{great(< does not match.
->}(a< does not match.
+>}(a< matches Stir.
 >{Wrong(< does not match.
 >@RTW#< matches Ent.
 >@0S9V#< matches Ent.

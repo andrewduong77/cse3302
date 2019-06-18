@@ -1,6 +1,6 @@
 // Duong, Andrew
 // and7697
-// 2019-06-14
+// 2019-06-17
 
 import java.nio.file.Paths;
 import java.nio.file.Files;
@@ -14,7 +14,6 @@ public class hmwk_03 {
     // the string in 'token' according to your three Regular
     // Expressions and print the appropriate message.
 
-    // System.out.println( ">" + token + "< is the proposed token." );
     if( Pattern.matches( "[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+" , token ) )
       System.out.println( ">" + token + "< matches EffPea." );
     else if( Pattern.matches( "\\}[a-z0-9]*\\(" , token ))
