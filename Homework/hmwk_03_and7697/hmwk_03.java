@@ -5,6 +5,7 @@
 import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.util.Arrays;
+import java.util.regex.*;
 
 public class hmwk_03 {
   public static void processToken( String token )
@@ -13,7 +14,15 @@ public class hmwk_03 {
     // the string in 'token' according to your three Regular
     // Expressions and print the appropriate message.
 
-    System.out.println( ">" + token + "< is the proposed token." );
+    // System.out.println( ">" + token + "< is the proposed token." );
+    if( Pattern.matches( "[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+" , token ) )
+      System.out.println( ">" + token + "< matches EffPea." );
+    else if( Pattern.matches( "\\}[a-z0-9]*\\(" , token ))
+      System.out.println( ">" + token + "< matches Stir." );
+    else if( Pattern.matches( "\\@[0-9R-W]+\\#" , token ))
+      System.out.println( ">" + token + "< matches Ent." );
+    else
+      System.out.println( ">" + token + "< does not match." );
   }
 
   public static void main( String[] args )

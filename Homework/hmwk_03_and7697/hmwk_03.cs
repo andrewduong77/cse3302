@@ -18,6 +18,7 @@ public class hmwk_03
 
   static public void Main( string[] args )
   {
+    args[ 0 ] = "inputdata.txt";
     Console.WriteLine( "processing tokens from " + args[ 0 ] + " ..." );
 
     foreach ( string line in File.ReadAllLines( args[ 0 ] ) ) {
