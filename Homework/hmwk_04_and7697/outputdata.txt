@@ -1,0 +1,21 @@
+processing tokens from inputdata.txt ...
+>g!PEA< matches GeePea.
+>gGgGG!!!PEA< matches GeePea.
+>GGG?pea< matches GeePea.
+>GGG?!?< matches GeePea.
+>gG!PEA< does not match.
+>ggg!Pea< does not match.
+>GgGGg?!?pea< does not match.
+>gggGGG< does not match.
+>&abcd/< matches Shake.
+>/mnop+< matches Shake.
+>+gxhyiz&< matches Shake.
+>&abcd&< does not match.
+>/mop+< does not match.
+>+GxHyIz&< does not match.
+>#rtv&< matches Orc.
+>#WTUSU*< matches Orc.
+>#@< matches Orc.
+>rrr&< does not match.
+>#UVUV@< does not match.
+>#rStU&< does not match.
