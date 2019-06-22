@@ -19,7 +19,26 @@ void processToken( char *token )
   // Expressions and print the appropriate message.
   // (Hint: use regexec to do the regular expression matching.)
 
-  printf( ">%s< is the proposed token.\n", token);
+  // printf( ">%s< is the proposed token.\n", token);
+
+  regex_t re;
+  // if ( regcomp ( &re, "^g(gg)*(\\!+PEA|\\?+pea|(\\!|\\?)+$", REG_EXTENDED|REG_NOSUB ) != 0 )
+  //   return 0;
+  regcomp ( &re, "^g(gg)*(\\!+PEA|\\?+pea|(\\!|\\?)+$", REG_EXTENDED|REG_NOSUB );
+  int GeePea_status = regexec ( &re , token , 0 , NULL , 0 );
+  regfree ( &re );
+  if ( GeePea_status )
+    printf ( ">%s< matches GeePea." , token );
+  else
+    printf ( ">%s< does not match." , token );
+  // if ( Pattern.matches( "[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+" , token ) )
+  //   System.out.println( ">" + token + "< matches EffPea." );
+  // else if ( Pattern.matches( "\\}[a-z0-9]*\\(" , token ) )
+  //   System.out.println( ">" + token + "< matches Stir." );
+  // else if ( Pattern.matches( "\\@[0-9R-W]+\\#" , token ) )
+  //   System.out.println( ">" + token + "< matches Ent." );
+  // else
+  //   System.out.println( ">" + token + "< does not match." );
 }
 
 int main( int argc, char *argv[] )
