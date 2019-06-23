@@ -23,33 +23,33 @@ void processToken( char *token )
 
   regex_t re;
   
-  if ( regcomp ( &re, "^g(gg)*(\\!+PEA|\\?+pea)|(\\!|\\?)+$", REG_EXTENDED ) != 0 )
+  if ( regcomp ( &re, "^[gG]([gG][gG])*(\\!+PEA|\\?+pea|(\\!|\\?)+)$", REG_EXTENDED ) != 0 )
   {
     printf("Regex match failed for GeePea. Terminating...\n");
     exit(1);
   }
-  int GeePea_status = regexec ( &re , token , 0 , NULL , 0 );
-  regfree ( &re );
-  if ( regcomp ( &re, "^(\\&([a-z][a-z])*(\\+|\\/))|(\\+([a-z][a-z])*(\\&|\\/))|(\\/([a-z][a-z])*(\\+|\\&))$", REG_EXTENDED ) != 0 )
-  {
-    printf("Regex match failed for Shake. Terminating...\n");
-    exit(1);
-  }
-  int Shake_status = regexec ( &re , token , 0 , NULL , 0 );
-  regfree ( &re );
-  if ( regcomp ( &re, "^(\\#[r-w]+\\&)|(\\#[R-W]+\\*)|(\\#\\@)$", REG_EXTENDED ) != 0 )
-  {
-    printf("Regex match failed for Orc. Terminating...\n");
-    exit(1);
-  }
+  int GeePea_status = ! regexec ( &re , token , 0 , NULL , 0 );
+  // regfree ( &re );
+  // if ( regcomp ( &re, "^(\\&(a-za-z)*(\\+|\\/))|(\\+([a-z][a-z])*(\\&|\\/))|(\\/([a-z][a-z])*(\\+|\\&))$", REG_EXTENDED ) != 0 )
+  // {
+  //   printf("Regex match failed for Shake. Terminating...\n");
+  //   exit(1);
+  // }
+  // int Shake_status = regexec ( &re , token , 0 , NULL , 0 );
+  // regfree ( &re );
+  // if ( regcomp ( &re, "^(\\#[r-w]+\\&)|(\\#[R-W]+\\*)|(\\#\\@)$", REG_EXTENDED ) != 0 )
+  // {
+  //   printf("Regex match failed for Orc. Terminating...\n");
+  //   exit(1);
+  // }
   int Orc_status = regexec ( &re , token , 0 , NULL , 0 );
   regfree ( &re );
   if ( GeePea_status )
     printf ( ">%s< matches GeePea.\n" , token );
-  else if ( Shake_status )
-    printf ( ">%s< matches Shake.\n" , token );
-  else if ( Orc_status )
-    printf ( ">%s< matches Orc.\n" , token );
+  // else if ( Shake_status )
+  //   printf ( ">%s< matches Shake.\n" , token );
+  // else if ( Orc_status )
+  //   printf ( ">%s< matches Orc.\n" , token );
   else
     printf ( ">%s< does not match.\n" , token );
 }

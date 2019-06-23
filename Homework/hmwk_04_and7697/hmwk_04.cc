@@ -16,7 +16,7 @@ void processToken( string token )
 
   // cout << ">" << token << "< is the proposed token.\n";
 
-  if ( regex_match ( token.begin(), token.end(), "^g(gg)*(\\!+PEA|\\?+pea)|(\\!|\\?)+$" ) )
+  if ( regex_match ( token.begin(), token.end(), regex ( "^[gG]([gG][gG])*(\\!+PEA|\\?+pea|(\\!|\\?)+)$" ) ) )
     cout << ">" << token << "< matches GeePea.\n";
   // else if ( regex_match ( token.begin(), token.end(), "^(\\&([a-z][a-z])*(\\+|\\/))|(\\+([a-z][a-z])*(\\&|\\/))|(\\/([a-z][a-z])*(\\+|\\&))$" ) )
   //   cout << ">" << token << "< matches GeePea.\n";
