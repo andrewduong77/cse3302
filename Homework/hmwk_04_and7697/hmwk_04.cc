@@ -15,7 +15,15 @@ void processToken( string token )
   // Expressions and print the appropriate message.
 
   // cout << ">" << token << "< is the proposed token.\n";
-  
+
+  if ( regex_match ( token.begin(), token.end(), "^g(gg)*(\\!+PEA|\\?+pea)|(\\!|\\?)+$" ) )
+    cout << ">" << token << "< matches GeePea.\n";
+  // else if ( regex_match ( token.begin(), token.end(), "^(\\&([a-z][a-z])*(\\+|\\/))|(\\+([a-z][a-z])*(\\&|\\/))|(\\/([a-z][a-z])*(\\+|\\&))$" ) )
+  //   cout << ">" << token << "< matches GeePea.\n";
+  // else if ( regex_match ( token.begin(), token.end(), "^(\\#[r-w]+\\&)|(\\#[R-W]+\\*)|(\\#\\@)$" ) )
+  //   cout << ">" << token << "< matches GeePea.\n";
+  else
+    cout << ">" << token << "< does not match.\n";
 }
 
 int main( int argc, char *argv[] )
