@@ -18,8 +18,8 @@ void processToken( string token )
 
   if ( regex_match ( token.begin(), token.end(), regex ( "^[gG]([gG][gG])*(\\!+PEA|\\?+pea|(\\!|\\?)+)$" ) ) )
     cout << ">" << token << "< matches GeePea.\n";
-  // else if ( regex_match ( token.begin(), token.end(), "^(\\&([a-z][a-z])*(\\+|\\/))|(\\+([a-z][a-z])*(\\&|\\/))|(\\/([a-z][a-z])*(\\+|\\&))$" ) )
-  //   cout << ">" << token << "< matches GeePea.\n";
+  else if ( regex_match ( token.begin(), token.end(), regex ( "^(\\&([a-z][a-z])*(\\+|\\/))|(\\+([a-z][a-z])*(\\&|\\/))|(\\/([a-z][a-z])*(\\+|\\&))$" ) ) )
+    cout << ">" << token << "< matches Shake.\n";
   // else if ( regex_match ( token.begin(), token.end(), "^(\\#[r-w]+\\&)|(\\#[R-W]+\\*)|(\\#\\@)$" ) )
   //   cout << ">" << token << "< matches GeePea.\n";
   else
