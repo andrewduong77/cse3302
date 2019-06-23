@@ -23,7 +23,7 @@ void processToken( char *token )
 
   regex_t re;
   
-  if ( regcomp ( &re, "^ggg*\\!+PEA|\\?+pea|\\!|\\?+$", REG_EXTENDED|REG_NOSUB ) != 0 )
+  if ( regcomp ( &re, "^g(gg)*(\\!+PEA|\\?+pea)|(\\!|\\?)+$", REG_EXTENDED|REG_NOSUB ) != 0 )
   {
     printf("Regex match failed for GeePea. Terminating...\n");
     exit(1);
@@ -37,7 +37,7 @@ void processToken( char *token )
   }
   int Shake_status = regexec ( &re , token , 0 , NULL , 0 );
   regfree ( &re );
-  if ( regcomp ( &re, "^(\\#[r-w]+\\&)|(//#[R-W]+\\*)|(\\#\\@)$", REG_EXTENDED|REG_NOSUB ) != 0 )
+  if ( regcomp ( &re, "^(\\#[r-w]+\\&)|(\\#[R-W]+\\*)|(\\#\\@)$", REG_EXTENDED|REG_NOSUB ) != 0 )
   {
     printf("Regex match failed for Orc. Terminating...\n");
     exit(1);
