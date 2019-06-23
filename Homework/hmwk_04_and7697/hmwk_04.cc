@@ -14,8 +14,6 @@ void processToken( string token )
   // the string in 'token' according to your three Regular
   // Expressions and print the appropriate message.
 
-  // cout << ">" << token << "< is the proposed token.\n";
-
   if ( regex_match ( token.begin(), token.end(), regex ( "^[gG]([gG][gG])*(\\!+PEA|\\?+pea|(\\!|\\?)+)$" ) ) )
     cout << ">" << token << "< matches GeePea.\n";
   else if ( regex_match ( token.begin(), token.end(), regex ( "^(\\&([a-z][a-z])*(\\+|\\/))|(\\+([a-z][a-z])*(\\&|\\/))|(\\/([a-z][a-z])*(\\+|\\&))$" ) ) )

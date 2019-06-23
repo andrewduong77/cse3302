@@ -19,8 +19,6 @@ void processToken( char *token )
   // Expressions and print the appropriate message.
   // (Hint: use regexec to do the regular expression matching.)
 
-  // printf( ">%s< is the proposed token.\n", token);
-
   regex_t re;
   
   if ( regcomp ( &re, "^[gG]([gG][gG])*(\\!+PEA|\\?+pea|(\\!|\\?)+)$", REG_EXTENDED ) != 0 )
