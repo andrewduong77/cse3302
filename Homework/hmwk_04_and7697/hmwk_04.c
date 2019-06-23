@@ -22,29 +22,36 @@ void processToken( char *token )
   // printf( ">%s< is the proposed token.\n", token);
 
   regex_t re;
-  // if ( regcomp ( &re, "^g(gg)*(\\!+PEA|\\?+pea|(\\!|\\?)+$", REG_EXTENDED|REG_NOSUB ) != 0 )
-  //   return 0;
-  regcomp ( &re, "^g(gg)*(\\!+PEA|\\?+pea|(\\!|\\?)+$", REG_EXTENDED|REG_NOSUB );
+  
+  if ( regcomp ( &re, "^ggg*\\!+PEA|\\?+pea|\\!|\\?+$", REG_EXTENDED|REG_NOSUB ) != 0 )
+  {
+    printf("Regex match failed for GeePea. Terminating...\n");
+    exit(1);
+  }
   int GeePea_status = regexec ( &re , token , 0 , NULL , 0 );
   regfree ( &re );
-  regcomp ( &re, "^(\&([a-z][a-z])*(\$", REG_EXTENDED|REG_NOSUB );
+  if ( regcomp ( &re, "^(\\&([a-z][a-z])*(\\+|\\/))|(\\+([a-z][a-z])*(\\&|\\/))|(\\/([a-z][a-z])*(\\+|\\&))$", REG_EXTENDED|REG_NOSUB ) != 0 )
+  {
+    printf("Regex match failed for Shake. Terminating...\n");
+    exit(1);
+  }
   int Shake_status = regexec ( &re , token , 0 , NULL , 0 );
   regfree ( &re );
-  regcomp ( &re, "^g(gg)*(\\!+PEA|\\?+pea|(\\!|\\?)+$", REG_EXTENDED|REG_NOSUB );
-  int GeePea_status = regexec ( &re , token , 0 , NULL , 0 );
+  if ( regcomp ( &re, "^(\\#[r-w]+\\&)|(//#[R-W]+\\*)|(\\#\\@)$", REG_EXTENDED|REG_NOSUB ) != 0 )
+  {
+    printf("Regex match failed for Orc. Terminating...\n");
+    exit(1);
+  }
+  int Orc_status = regexec ( &re , token , 0 , NULL , 0 );
   regfree ( &re );
   if ( GeePea_status )
-    printf ( ">%s< matches GeePea." , token );
+    printf ( ">%s< matches GeePea.\n" , token );
+  else if ( Shake_status )
+    printf ( ">%s< matches Shake.\n" , token );
+  else if ( Orc_status )
+    printf ( ">%s< matches Orc.\n" , token );
   else
-    printf ( ">%s< does not match." , token );
-  // if ( Pattern.matches( "[aeiouAEIOU]+\\{\\)[0-9a-fA-F]+" , token ) )
-  //   System.out.println( ">" + token + "< matches EffPea." );
-  // else if ( Pattern.matches( "\\}[a-z0-9]*\\(" , token ) )
-  //   System.out.println( ">" + token + "< matches Stir." );
-  // else if ( Pattern.matches( "\\@[0-9R-W]+\\#" , token ) )
-  //   System.out.println( ">" + token + "< matches Ent." );
-  // else
-  //   System.out.println( ">" + token + "< does not match." );
+    printf ( ">%s< does not match.\n" , token );
 }
 
 int main( int argc, char *argv[] )
