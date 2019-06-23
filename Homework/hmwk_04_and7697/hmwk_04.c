@@ -27,6 +27,12 @@ void processToken( char *token )
   regcomp ( &re, "^g(gg)*(\\!+PEA|\\?+pea|(\\!|\\?)+$", REG_EXTENDED|REG_NOSUB );
   int GeePea_status = regexec ( &re , token , 0 , NULL , 0 );
   regfree ( &re );
+  regcomp ( &re, "^(\&([a-z][a-z])*(\$", REG_EXTENDED|REG_NOSUB );
+  int Shake_status = regexec ( &re , token , 0 , NULL , 0 );
+  regfree ( &re );
+  regcomp ( &re, "^g(gg)*(\\!+PEA|\\?+pea|(\\!|\\?)+$", REG_EXTENDED|REG_NOSUB );
+  int GeePea_status = regexec ( &re , token , 0 , NULL , 0 );
+  regfree ( &re );
   if ( GeePea_status )
     printf ( ">%s< matches GeePea." , token );
   else

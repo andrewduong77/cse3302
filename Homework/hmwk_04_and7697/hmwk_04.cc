@@ -14,7 +14,8 @@ void processToken( string token )
   // the string in 'token' according to your three Regular
   // Expressions and print the appropriate message.
 
-  cout << ">" << token << "< is the proposed token.\n";
+  // cout << ">" << token << "< is the proposed token.\n";
+  
 }
 
 int main( int argc, char *argv[] )
