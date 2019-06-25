@@ -1,0 +1,25 @@
+processing tokens from testTokenData.txt ...
+>a{)0fa0fFF< matches EffPea.
+>aAeE{)eAa< matches EffPea.
+>AE{)9F< matches EffPea.
+>Ae{)9< matches EffPea.
+>AEIOUaeiou{)0< matches EffPea.
+>e{)1< matches EffPea.
+>@000#< matches Ent.
+>@0123RW#< matches Ent.
+>@09494RWT#< matches Ent.
+>@0#< matches Ent.
+>@2569RUW#< matches Ent.
+>@96#< matches Ent.
+>0@R#< does not match.
+>}ABZ98(< does not match.
+>aeithae{)0< does not match.
+>AEx{)9F< does not match.
+>Ae{)Z< does not match.
+>}aththue((< does not match.
+>}095athtd(< matches Stir.
+>}0e0u8oeu(< matches Stir.
+>}1101101(< matches Stir.
+>}1(< matches Stir.
+>}9876(< matches Stir.
+>}a08(< matches Stir.
