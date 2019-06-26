@@ -7,6 +7,10 @@ public class hmwk_05_imperative {
   // Sum of cubes
   static Long sumOfCubes( Long n ) {
     // Put something here
+    if ( n == 0)
+      return 0;
+    else
+      sumOfCubes( n - 1 );
   }
 
   // Pseudo-Pell numbers
@@ -23,6 +27,10 @@ public class hmwk_05_imperative {
   public static void main( String[] args )
   {
     // Put for loop here that calls sumOfCubes().
+    for ( long i = 0; 15; i++ )
+    {
+      sumOfCubes( i );
+    }
 
     // Put for loop here that calls pseudoPell().
 
