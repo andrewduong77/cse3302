@@ -1,0 +1,132 @@
+sumOfCubes(0) is 0
+sumOfCubes(1) is 1
+sumOfCubes(2) is 9
+sumOfCubes(3) is 36
+sumOfCubes(4) is 100
+sumOfCubes(5) is 225
+sumOfCubes(6) is 441
+sumOfCubes(7) is 784
+sumOfCubes(8) is 1296
+sumOfCubes(9) is 2025
+sumOfCubes(10) is 3025
+sumOfCubes(11) is 4356
+sumOfCubes(12) is 6084
+sumOfCubes(13) is 8281
+sumOfCubes(14) is 11025
+sumOfCubes(15) is 14400
+pseudoPell(0) is 0
+pseudoPell(1) is 1
+pseudoPell(2) is 3
+pseudoPell(3) is 11
+pseudoPell(4) is 39
+pseudoPell(5) is 139
+pseudoPell(6) is 495
+pseudoPell(7) is 1763
+pseudoPell(8) is 6279
+pseudoPell(9) is 22363
+pseudoPell(10) is 79647
+pseudoPell(11) is 283667
+pseudoPell(12) is 1010295
+pseudoPell(13) is 3598219
+pseudoPell(14) is 12815247
+pseudoPell(15) is 45642179
+GCD(1, 1) is 1
+GCD(1, 2) is 1
+GCD(1, 3) is 1
+GCD(1, 4) is 1
+GCD(1, 5) is 1
+GCD(1, 6) is 1
+GCD(1, 7) is 1
+GCD(1, 8) is 1
+GCD(1, 9) is 1
+GCD(1, 10) is 1
+GCD(2, 1) is 1
+GCD(2, 2) is 2
+GCD(2, 3) is 1
+GCD(2, 4) is 2
+GCD(2, 5) is 1
+GCD(2, 6) is 2
+GCD(2, 7) is 1
+GCD(2, 8) is 2
+GCD(2, 9) is 1
+GCD(2, 10) is 2
+GCD(3, 1) is 1
+GCD(3, 2) is 1
+GCD(3, 3) is 3
+GCD(3, 4) is 1
+GCD(3, 5) is 1
+GCD(3, 6) is 3
+GCD(3, 7) is 1
+GCD(3, 8) is 1
+GCD(3, 9) is 3
+GCD(3, 10) is 1
+GCD(4, 1) is 1
+GCD(4, 2) is 2
+GCD(4, 3) is 1
+GCD(4, 4) is 4
+GCD(4, 5) is 1
+GCD(4, 6) is 2
+GCD(4, 7) is 1
+GCD(4, 8) is 4
+GCD(4, 9) is 1
+GCD(4, 10) is 2
+GCD(5, 1) is 1
+GCD(5, 2) is 1
+GCD(5, 3) is 1
+GCD(5, 4) is 1
+GCD(5, 5) is 5
+GCD(5, 6) is 1
+GCD(5, 7) is 1
+GCD(5, 8) is 1
+GCD(5, 9) is 1
+GCD(5, 10) is 5
+GCD(6, 1) is 1
+GCD(6, 2) is 2
+GCD(6, 3) is 3
+GCD(6, 4) is 2
+GCD(6, 5) is 1
+GCD(6, 6) is 6
+GCD(6, 7) is 1
+GCD(6, 8) is 2
+GCD(6, 9) is 3
+GCD(6, 10) is 2
+GCD(7, 1) is 1
+GCD(7, 2) is 1
+GCD(7, 3) is 1
+GCD(7, 4) is 1
+GCD(7, 5) is 1
+GCD(7, 6) is 1
+GCD(7, 7) is 7
+GCD(7, 8) is 1
+GCD(7, 9) is 1
+GCD(7, 10) is 1
+GCD(8, 1) is 1
+GCD(8, 2) is 2
+GCD(8, 3) is 1
+GCD(8, 4) is 4
+GCD(8, 5) is 1
+GCD(8, 6) is 2
+GCD(8, 7) is 1
+GCD(8, 8) is 8
+GCD(8, 9) is 1
+GCD(8, 10) is 2
+GCD(9, 1) is 1
+GCD(9, 2) is 1
+GCD(9, 3) is 3
+GCD(9, 4) is 1
+GCD(9, 5) is 1
+GCD(9, 6) is 3
+GCD(9, 7) is 1
+GCD(9, 8) is 1
+GCD(9, 9) is 9
+GCD(9, 10) is 1
+GCD(10, 1) is 1
+GCD(10, 2) is 2
+GCD(10, 3) is 1
+GCD(10, 4) is 2
+GCD(10, 5) is 5
+GCD(10, 6) is 2
+GCD(10, 7) is 1
+GCD(10, 8) is 2
+GCD(10, 9) is 1
+GCD(10, 10) is 10
