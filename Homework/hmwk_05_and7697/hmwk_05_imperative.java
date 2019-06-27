@@ -5,8 +5,7 @@
 public class hmwk_05_imperative {
   //----------------------------------------------------------
   // Sum of cubes
-  static int sumOfCubes( int n ) {
-    // Put something here
+  static long sumOfCubes( long n ) {
     if ( n == 0 )
       return 0;
     else
@@ -14,8 +13,7 @@ public class hmwk_05_imperative {
   }
 
   // Pseudo-Pell numbers
-  static int pseudoPell( int n ) {
-    // Put something here
+  static long pseudoPell( long n ) {
     if ( n == 0 )
       return 0;
     else if ( n == 1 )
@@ -25,9 +23,8 @@ public class hmwk_05_imperative {
   }
 
   // GCD
-  static int GCD( int m, int n ) {
-    // Put something here
-    int remainder, numerator, denominator;
+  static long GCD( long m, long n ) {
+    long remainder, numerator, denominator;
 
     if( m > n )
     {
@@ -52,17 +49,14 @@ public class hmwk_05_imperative {
   //----------------------------------------------------------
   public static void main( String[] args )
   {
-    // Put for loop here that calls sumOfCubes().
-    for ( int i = 0; i <= 15; i++ )
+    for ( long i = 0; i <= 15; i++ )
       System.out.println( "sumOfCubes(" + i + ") is " + sumOfCubes( i ) );
 
-    // Put for loop here that calls pseudoPell().
-    for ( int i = 0; i <= 15; i++ )
+    for ( long i = 0; i <= 15; i++ )
       System.out.println( "pseudoPell(" + i + ") is " + pseudoPell( i ) );
 
-    // Put nested for loops here that call GCD().
-    for ( int i = 1; i <= 10; i++ )
-      for ( int j = 1; j <= 10; j++ )
+    for ( long i = 1; i <= 10; i++ )
+      for ( long j = 1; j <= 10; j++ )
         System.out.println( "GCD(" + i + ", " + j + ") is " + GCD( i, j ) );
   }
 }
