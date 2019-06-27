@@ -27,9 +27,9 @@ public class hmwk_05_imperative {
   // GCD
   static int GCD( int m, int n ) {
     // Put something here
-    int gcd, remainder, numerator, denominator;
+    int remainder, numerator, denominator;
 
-    if(m > n)
+    if( m > n )
     {
       numerator = m;
       denominator = n;
@@ -40,7 +40,7 @@ public class hmwk_05_imperative {
       denominator = m;
     }
     remainder = numerator % denominator;
-    while(remainder != 0)
+    while( remainder != 0 )
     {
       numerator = denominator;
       denominator = remainder;
