@@ -5,31 +5,31 @@
 public class hmwk_05_imperative {
   //----------------------------------------------------------
   // Sum of cubes
-  static Long sumOfCubes( Long n ) {
+  static int sumOfCubes( int n ) {
     // Put something here
-    if ( n == 0)
+    if ( n == 0 )
       return 0;
     else
-      sumOfCubes( n - 1 );
+      return sumOfCubes( n - 1 );
   }
 
-  // Pseudo-Pell numbers
-  static Long pseudoPell( Long n ) {
-    // Put something here
-  }
+  // // Pseudo-Pell numbers
+  // static int pseudoPell( int n ) {
+  //   // Put something here
+  // }
 
-  // GCD
-  static Long GCD( Long m, Long n ) {
-    // Put something here
-  }
+  // // GCD
+  // static int GCD( int m, int n ) {
+  //   // Put something here
+  // }
 
   //----------------------------------------------------------
   public static void main( String[] args )
   {
     // Put for loop here that calls sumOfCubes().
-    for ( long i = 0; 15; i++ )
+    for ( int i = 0; i <= 15; i++ )
     {
-      sumOfCubes( i );
+      System.out.println( "sumOfCubes(" + i + ") is " + sumOfCubes( i ) );
     }
 
     // Put for loop here that calls pseudoPell().
