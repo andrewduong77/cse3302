@@ -46,7 +46,7 @@ public class hmwk_05_imperative {
       denominator = remainder;
       remainder = numerator % denominator;
     }
-    return demonimator;
+    return denominator;
   }
 
   //----------------------------------------------------------
