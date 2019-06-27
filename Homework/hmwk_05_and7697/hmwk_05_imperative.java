@@ -24,26 +24,21 @@ public class hmwk_05_imperative {
 
   // GCD
   static long GCD( long m, long n ) {
-    long remainder, numerator, denominator;
 
-    if( m > n )
+    if ( m > n )
     {
-      numerator = m;
-      denominator = n;
+      if ( m % n == 0 )
+        return n;
+      else
+        return GCD( n, m % n );
     }
     else
     {
-      numerator = n;
-      denominator = m;
+      if ( n % m == 0 )
+        return m;
+      else
+        return GCD( m, n % m );
     }
-    remainder = numerator % denominator;
-    while( remainder != 0 )
-    {
-      numerator = denominator;
-      denominator = remainder;
-      remainder = numerator % denominator;
-    }
-    return denominator;
   }
 
   //----------------------------------------------------------

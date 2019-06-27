@@ -9,45 +9,38 @@ public class hmwk_05_lambda {
   //----------------------------------------------------------
   // sumOfCubes lambda goes here.
   static UnaryOperator<Integer>
-    sumOfCubes = ( Integer n ) -> ( n == 0 ) ? 0 : n*n*n + sumOfCubes.apply( n - 1 );
+    sumOfCubes = ( Integer n ) -> ( n == 0 ) ? 0 : n*n*n + hmwk_05_lambda.sumOfCubes.apply( n - 1 );
 
   // pseudoPell lambda goes here.
   static UnaryOperator<Integer>
-    pseudoPell = ( Integer n ) ->
-    {
-    if ( n == 0 )
-      return 0;
-    else if ( n == 1 )
-      return 1;
-    else
-      return 3 * pseudoPell.apply( n - 1 ) + 2 * pseudoPell.apply( n - 2 );
-    };
+    pseudoPell = ( Integer n ) -> ( n == 0 ) ? 0 : ( n == 1 ) ? 1 : 3 * hmwk_05_lambda.pseudoPell.apply( n - 1 ) + 2 * hmwk_05_lambda.pseudoPell.apply( n - 2 );
 
   // GCD lambda goes here.
-  static UnaryOperator<Integer>
-    GCD = ( Integer m, Integer n ) ->
-    {
-      int remainder, numerator, denominator;
+  static BinaryOperator<Integer>
+    GCD = ( Integer m, Integer n ) -> ( m > n ) ? 
+    // GCD = ( Integer m, Integer n ) ->
+    // {
+    //   int remainder, numerator, denominator;
 
-      if( m > n )
-      {
-        numerator = m;
-        denominator = n;
-      }
-      else
-      {
-        numerator = n;
-        denominator = m;
-      }
-      remainder = numerator % denominator;
-      while( remainder != 0 )
-      {
-        numerator = denominator;
-        denominator = remainder;
-        remainder = numerator % denominator;
-      }
-      return denominator;
-    };
+    //   if( m > n )
+    //   {
+    //     numerator = m;
+    //     denominator = n;
+    //   }
+    //   else
+    //   {
+    //     numerator = n;
+    //     denominator = m;
+    //   }
+    //   remainder = numerator % denominator;
+    //   while( remainder != 0 )
+    //   {
+    //     numerator = denominator;
+    //     denominator = remainder;
+    //     remainder = numerator % denominator;
+    //   }
+    //   return denominator;
+    // };
 
   //----------------------------------------------------------
   public static void main( String[] args )
